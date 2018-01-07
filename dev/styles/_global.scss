@@ -1,0 +1,68 @@
+// variables
+
+$main-text: 'Nunito Sans', sans-serif;
+$secondary-text: 'Open Sans', sans-serif;
+
+$white: rgb(254, 255, 253);
+$black: rgb(24, 29, 37);
+
+// mixins
+
+@mixin font-size-value($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+// wrappers
+.wrapper--max {
+    max-width: 2500px;
+    margin: 0 auto;
+}
+
+.wrapper--inner {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+// base size
+
+html {
+    font-size: 62.5%;
+}
+
+// general
+
+body {
+    text-align: center;
+}
+
+main {
+    background: url("/public/styles/assets/clear-day--background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1px;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    @include font-size-value(14);
+}
+
+p, button {
+    @include font-size-value(19);
+}
+
+p, a, button {
+    color: $black;
+}
+
+h1 {
+    @include font-size-value(45);
+    margin-bottom: 0;
+}

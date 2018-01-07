@@ -1,0 +1,66 @@
+// loading screen/icon
+
+loader {
+    background: $white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    .loading-icon--container {
+        margin-top: 40vh;
+    }
+    .fa-spinner {
+    @include font-size-value(60);
+    z-index: 2;
+    }
+}
+
+.weather-results, .loading-screen {
+    display: none;
+}
+
+// where results are displayed
+.weather-results--total {
+    background: rgba($white, 0.7);
+    width: 75%;
+    min-height: 570px;
+    margin-top: 8vh;
+    padding: 20px;
+}
+
+.weather-results--styles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+        border-radius: 8px;
+        padding: 6px 8px;
+        border: 1.5px solid $black;
+        transition: 0.2s linear;
+        &:hover {
+            color: $white;
+            background: $black;
+        }
+    }
+    .fa-info-circle {
+        padding-left: 5px;
+        vertical-align: 2%;
+        @include font-size-value(14);
+        // position: relative;
+        cursor: pointer;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.date-time--results-p {
+    @include font-size-value(14);
+    margin-top: 85px;
+    margin-bottom: 3px;
+}
+
+// info circle
+.info-circle-hover--text {
+    display: none;
+    // position: absolute;
+}

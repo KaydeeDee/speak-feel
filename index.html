@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Weather App</title>
+	<link rel="stylesheet" href="public/styles/style.css">
+	<link type="image/png" href="public/styles/assets/" rel="icon">
+</head>
+<body>
+	<!-- clear sky photo by SHTTEFAN on Unsplash -->
+	<!-- clear night sky photo by Matthew Kane on Unsplash -->
+	<!-- rain photo by reza shayestehpour on Unsplash -->
+	<!-- foggy forest photo by Inggrid Koe on Unsplash -->
+	<!-- dark cloudy photo by Ryos Kim on Unsplash -->
+	<!-- snow photo by Bob Canning on Unsplash -->
+	<main class="wrapper--max">
+		<!-- loading screen -->
+		<loader class="loading-screen">
+			<div class="loading-icon--container">
+				<i class="fa fa-spinner fa-pulse fa-fw"></i>
+				<span class="sr-only">Loading...</span>
+			</div>
+		</loader>
+		<header>
+			<h1>Weather App</h1>
+		</header>
+		<section class="weather-results--total wrapper--inner">
+			<!-- weather results on load -->
+				<div class="weather-results--styles">
+					<div class="weather-results">
+
+						<figure class="icons">
+							<canvas class="weatherType" id="icon1" width="128" height="128"></canvas>
+						</figure>
+
+						<p class="summary--results"></p>
+
+						<p class="temp--results">Current Temperature: <span class="temp-c-current--results"></span>&#176;C</p>
+
+						<p class="temp">Feels like: <span class="temp-c-feels-like--results"></span>&#176;C</p>
+
+						<p class="precip-prop--results-p">Chance of Rain: <span class="precip-prop--results"></span><i class="fa fa-info-circle" aria-hidden="true"></i><div class="info-circle-hover--text">words here</div></p>
+
+						<p class="precip-instens--results"></p>
+
+						<p class="week-ahead--results">What to expect this week: <span class="daily-week--results"></span></p>
+
+						<p class="date-time--results-p">Last Updated:
+							<span class="date-time--results"></span>
+						</p>
+					</div>
+					
+						<button class="weather-start--button">Tell me the weather!</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
+		</footer>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/3601c2fb03.js"></script>
+	<script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+	<script src="public/scripts/main.js"></script>
+	
+</body>
+</html>
