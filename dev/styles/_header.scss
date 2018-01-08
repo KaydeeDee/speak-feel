@@ -1,3 +1,5 @@
+// header shared with loading screen
+
 h1 {
     @include font-size-value(65);
     font-family: $header;
@@ -14,8 +16,42 @@ h1 {
     .fa {
         @include font-size-value(47);
         height: 37px;
-        margin-top: 31px;
+        margin-top: 34px;
         margin-left: 10px;
         vertical-align: bottom;
+    }
+}
+
+// media queries
+
+@media (max-width: 530px){
+    h1 {
+        @include font-size-value(55);
+    }
+    .h1-icon--flex .fa {
+        @include font-size-value(40);
+        margin-top: 29px
+    }
+}
+
+@media (max-width: 440px){
+    h1 {
+        @include font-size-value(48);
+    }
+    .h1-icon--flex .fa {
+        @include font-size-value(38);
+        margin-top: 26px
+    }
+}
+
+@media (max-width: 375px){
+    h1 {
+        @include font-size-value(40);
+        letter-spacing: 2px;
+    }
+    .h1-icon--flex .fa {
+        @include font-size-value(31);
+        margin-top: 23px;
+        margin-left: 2px;
     }
 }

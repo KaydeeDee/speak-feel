@@ -59,8 +59,12 @@ a {
     @include font-size-value(14);
 }
 
-p, button {
-    @include font-size-value(19);
+p {
+    @include font-size-value(20);
+}
+
+button {
+    @include font-size-value(22);
 }
 
 p, a, button {

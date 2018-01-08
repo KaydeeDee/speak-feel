@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Forcast</title>
+	<title>Forecast</title>
 	<link type="image/png" href="public/styles/assets/favicon-umbrella.ico" rel="icon">
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700|Open+Sans:400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700|Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/style.css">
 </head>
 <body>
@@ -30,6 +30,7 @@
 				<span class="sr-only">Loading...</span>
 			</div>
 		</loader>
+		<!-- wrapper "stick to bottom" footer start -->
 		<div class="footer--wrapper-responsive">
 			<header>
 				<div class="h1-icon--flex">
@@ -47,45 +48,70 @@
 							<figure class="icons">
 								<canvas class="weatherType" id="icon1"></canvas>
 							</figure>
-							<p class="temp-current--leading-temp"><span class="temp-c-current--results"></span>&#176;C</p>
+							<p class="temp-current--leading-temp"><span class="temp-c-current--results"></span></p>
 
 							<p class="summary--results"></p>
 
-							<p class="temp">Feels like: <span class="temp-c-feels-like--results"></span>&#176;C</p>
+							<div class="weather-results--flex">
+								<p class="weather-results--sub-titles">Feels like:&nbsp;</p> 
+								<p class="temp-c-feels-like--results"></p>
+							</div>
 
-							<p class="precip-prop--results-p">Chance of Precipitation: <span class="precip-prop--results"></span>&#37;</p>
+							<div class="weather-results--flex">
+								<p class="precip-prop--results-p weather-results--sub-titles">Chance of Precipitation:&nbsp;</p> 
+								<p class="precip-prop--results"></p>
+							</div>
 
-							<p class="precip-details--results-p">How much to expect: <span class="precip-instens--results"></span> Millimeters per hour</p>
+							<div class="weather-results--flex precip-details--results-p">
+								<p class="weather-results--sub-titles">How much to expect:&nbsp;</p>
+								<p class="precip-instens--results"></p>
+							</div>
 
-							<p class="precip-details--results-p">Type of Precipitation: <span class="precip-type--results"></span></p>
+							<div class="weather-results--flex precip-details--results-p">
+								<p class="weather-results--sub-titles">Type of Precipitation:&nbsp;</p>
+								<p class="precip-type--results"></p>
+							</div>
 
-							<p class="wind-speed--p">Wind Speed:
-								<span class="wind-speed--results"></span> m/sec
-							</p>
+							<div class="weather-results--flex">
+								<p class="weather-results--sub-titles">Wind Speed:&nbsp;</p>
+								<p class="wind-speed--results"></p>
+							</div>
 
-							<p class="week-ahead--results">What to expect this week: <span class="daily-week--results"></span></p>
+							<div class="weather-results--flex uv-index--mouse-leave">
+								<p class="weather-results--sub-titles">UV Index:&nbsp;</p>
+								<div class="icon-uv--flex">
+									<p class="uv-index--results"></p>
+									<i class="fa fa-info-circle" aria-hidden="true"></i>
+								</div>
+								<div class="info-circle-hover--text">
+									<p>The UV Index is on a scale of 0-10.</p>
+								</div>
+							</div>
 
-							<p class="date-time--results-p">Last Updated:
-								<span class="date-time--results"></span>
-							</p>
+							<div class="weather-results--flex">
+								<p class="week-ahead--results weather-results--sub-titles">What to expect this week:&nbsp;</p>
+								<p class="daily-week--results"></p>
+							</div>
 
 						</div>
 							<button class="weather-start--button">Tell me the weather!</button>
+							<p class="date-time--results-p weather-results">Last Updated:
+							<span class="date-time--results"></span>
+							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 		</div>
+		<!-- wrapper "stick to bottom" footer ends -->
 		<footer class="wrapper--inner--footer">
-			<a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
-			<a href="http://katiecodes.ca/">Made by Katie!</a>
+			<a href="https://darksky.net/poweredby/" target="_blank">Powered by Dark Sky</a>
+			<a href="http://katiecodes.ca/" target="_blank">Made by Katie!</a>
 		</footer>
 	</main>
-
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/3601c2fb03.js"></script>
 	<script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
 	<script src="public/scripts/main.js"></script>
-	
 </body>
 </html>

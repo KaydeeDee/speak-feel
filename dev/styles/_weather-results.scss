@@ -1,7 +1,8 @@
-// pre-text
+// text on intro screen
 .pre-text--pre-results {
     p {
         margin-bottom: 55px;
+        @include font-size-value(25);
     }
 }
 
@@ -31,7 +32,7 @@ loader {
 
 // where results are displayed
 .general-body--styles {
-    padding: 20px;
+    padding: 20px 40px;
     width: 75%;
     margin-top: 3vh;
 }
@@ -47,7 +48,7 @@ loader {
     align-items: center;
     button {
         border-radius: 8px;
-        padding: 6px 8px;
+        padding: 8px 10px;
         border: 1.5px solid $black;
         transition: 0.2s linear;
         text-transform: uppercase;
@@ -59,7 +60,7 @@ loader {
     }
     .fa-info-circle {
         padding-left: 5px;
-        vertical-align: 2%;
+        margin-top: 7px;
         @include font-size-value(14);
         cursor: pointer;
         &:hover {
@@ -79,13 +80,95 @@ loader {
     max-width: 250px;
     }
 
-.date-time--results-p {
+// result specific formatting
+.weather-results--flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    p {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    .week-ahead--results {
+        margin-bottom: 5px;
+    }
+}
+
+// all subtitles
+.weather-results--sub-titles {
+    font-weight: 600;
+}
+
+// type of precip
+.precip-type--results {
+    text-transform: capitalize;
+}
+
+// date and time and UV extra info text
+
+.uv-index--mouse-leave .info-circle-hover--text p, .date-time--results-p {
     @include font-size-value(14);
-    margin-top: 30px;
+    color: lighten($black, 40);
+}
+
+.date-time--results-p {
+    margin-top: 8px;
     margin-bottom: 3px;
 }
 
-// result specific formatting
-.precip-type--results {
-    text-transform: capitalize;
+// icon click to show info
+.info-circle-hover--text {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+// week ahead summary
+.daily-week--results {
+    margin-top: 0;
+}
+
+// info icon and text
+.icon-uv--flex {
+    display: flex;
+}
+
+// media queries
+
+@media (max-width: 850px){
+    .general-body--styles {
+        width: 85%;
+    }
+}
+
+@media (max-width: 440px){
+    #icon1 {
+    height: 100px;
+    max-width: 230px;
+    }
+    p {
+    @include font-size-value(17);
+    }
+    button {
+    @include font-size-value(18.5);
+    }   
+    .temp-current--leading-temp {
+    @include font-size-value(40);
+    }
+    .weather-results--styles .fa-info-circle {
+        margin-top: 5px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 375px){
+    .weather-results--flex {
+        flex-direction: column;
+        .weather-results--sub-titles {
+        margin-bottom: 5px;
+        }
+    }
+    .icon-uv--flex {
+        margin: 0 auto;
+    }
 }
