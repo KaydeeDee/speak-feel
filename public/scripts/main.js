@@ -43,34 +43,56 @@ weatherApp.getWeather = function () {
 
 // converting UNIX to readable time and date
 weatherApp.convertTime = function (unixTimestamp) {
-    var a = new Date(unixTimestamp * 1000);
+    var timeHold = new Date(unixTimestamp * 1000);
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    var year = a.getFullYear();
-    var month = months[a.getMonth()];
-    var date = a.getDate();
-    var hour = a.getHours();
-    var min = a.getMinutes() < 10 ? '0' + a.getMinutes() : a.getMinutes();
-    weatherApp.formattedTime = month + ' ' + date + ', ' + year + ' at ' + hour + ':' + min;
+    var year = timeHold.getFullYear();
+    var month = months[timeHold.getMonth()];
+    var date = timeHold.getDate();
+    var hour = timeHold.getHours();
+    var min = timeHold.getMinutes() < 10 ? '0' + timeHold.getMinutes() : timeHold.getMinutes();
 
-    $('.date-time--results').text(weatherApp.formattedTime);
+    var formattedTime = month + ' ' + date + ', ' + year + ' at ' + hour + ':' + min;
+
+    $('.date-time--results').text(formattedTime);
 };
 
+// display weather on page
 weatherApp.displayWeatherOnPage = function (current, alerts, daily) {
     console.log(current);
     console.log(alerts);
 
+    // round to 1 dec point for temperatures
+    var numberCurrent = current.temperature;
+    var numberApparent = current.apparentTemperature;
+
+    var roundedCurrent = Math.round(numberCurrent).toFixed(0);
+    var roundedApparent = Math.round(numberApparent).toFixed(0);
+
+    // make percentage out of chance of precip
+    var percipProb = current.precipProbability;
+
+    console.log(percipProb);
+
+    var percentagePercipProb = Math.round(percipProb * 100);
+    console.log(percentagePercipProb);
+
+    // inch to cm
+    var precipInt = current.precipIntensity;
+    var cmPrecipInt = Math.ceil(precipInt / 0.39370).toFixed(1);
+
     $('.summary--results').text(current.summary);
-    $('.temp-c-current--results').text(current.temperature);
-    $('.temp-c-feels-like--results').text(current.apparentTemperature);
+    $('.temp-c-current--results').text(roundedCurrent);
+    $('.temp-c-feels-like--results').text(roundedApparent);
     $('.daily-week--results').text(daily.summary);
 
     // if/else for precip probability to show intensity or not
-    if (current.precipProbability === 0) {
-        $('.precip-prop--results').text(current.precipProbability);
-        $('.precip-instens--results').hide();
+    if (percentagePercipProb === 0) {
+        $('.precip-prop--results').text(percentagePercipProb);
+        $('.precip-details--results-p').hide();
     } else {
-        $('.precip-prop--results').text(current.precipProbability);
-        $('.precip-instens--results').text(current.precipIntensity);
+        $('.precip-prop--results').text(percentagePercipProb);
+        $('.precip-instens--results').text(cmPrecipInt);
+        $('.precip-type--results').text(current.precipType);
     };
 
     weatherApp.changeBackgroundAndIcon(current.icon);
@@ -82,13 +104,42 @@ weatherApp.changeBackgroundAndIcon = function (backgroundNew) {
 
     icons.play();
 
-    if (backgroundNew === "wind" || backgroundNew === "rain") {
-        $('main').css('background', 'url("/public/styles/assets/wind--background.jpg")');
-    } else if (backgroundNew === "fog" || backgroundNew === "clear-night") {
-        $('main').css('background', 'url("/public/styles/assets/snow--background.jpg")');
+    console.log(backgroundNew);
+
+    if (backgroundNew === "clear-day") {
+        $('main').css('background', 'url("/public/styles/assets/clear-day--background.jpg")');
+        icons.set("icon1", Skycons.CLEAR_DAY);
+    } else if (backgroundNew === "clear-night") {
+        $('main').css('background', 'url("/public/styles/assets/clear-night--background.jpg")');
         icons.set("icon1", Skycons.CLEAR_NIGHT);
+    } else if (backgroundNew === "fog") {
+        $('main').css('background', 'url("/public/styles/assets/fog--background.jpg")');
+        icons.set("icon1", Skycons.FOG);
+    } else if (backgroundNew === "rain" || backgroundNew === "thunderstorm") {
+        $('main').css('background', 'url("/public/styles/assets/rain--background.jpg")');
+        icons.set("icon1", Skycons.RAIN);
+    } else if (backgroundNew === "snow" || backgroundNew === "hail") {
+        $('main').css('background', 'url("/public/styles/assets/snow--background.jpg")');
+        icons.set("icon1", Skycons.SNOW);
+    } else if (backgroundNew === "wind" || backgroundNew === "tornado") {
+        $('main').css('background', 'url("/public/styles/assets/wind--background.jpg")');
+        icons.set("icon1", Skycons.WIND);
+    } else if (backgroundNew === "sleet") {
+        $('main').css('background', 'url("/public/styles/assets/wind--background.jpg")');
+        icons.set("icon1", Skycons.SLEET);
+    } else if (backgroundNew === "sleet") {
+        $('main').css('background', 'url("/public/styles/assets/wind--background.jpg")');
+        icons.set("icon1", Skycons.SLEET);
+    } else if (backgroundNew === "partly-cloudly-day") {
+        icons.set("icon1", Skycons.PARTLY_CLOUDY_DAY);
+    } else if (backgroundNew === "cloudy") {
+        icons.set("icon1", Skycons.CLOUDY);
+    } else if (backgroundNew === "partly-cloudy-night") {
+        $('main').css('background', 'url("/public/styles/assets/clear-night--background.jpg")');
+        icons.set("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
     } else {
         $('main').css('background', 'url("/public/styles/assets/clear-day--background.jpg")');
+        icons.set("icon1", Skycons.PARTLY_CLOUDY_DAY);
     };
 
     $('main').css({ 'background-size': 'cover',

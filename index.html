@@ -4,9 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Weather App</title>
+	<title>Forcast</title>
+	<link type="image/png" href="public/styles/assets/favicon-umbrella.ico" rel="icon">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700|Open+Sans:300i,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/style.css">
-	<link type="image/png" href="public/styles/assets/" rel="icon">
 </head>
 <body>
 	<!-- clear sky photo by SHTTEFAN on Unsplash -->
@@ -18,32 +19,40 @@
 	<main class="wrapper--max">
 		<!-- loading screen -->
 		<loader class="loading-screen">
-			<div class="loading-icon--container">
+			<div class="loading-icon--container"></div>
+				<div class="h1-icon--flex">
+					<h1>Forcast</h1>
+					<i class="fa fa-umbrella" aria-hidden="true"></i>
+				</div>
+				<p>Grabbing information on your local weather...</p>
 				<i class="fa fa-spinner fa-pulse fa-fw"></i>
 				<span class="sr-only">Loading...</span>
 			</div>
 		</loader>
 		<header>
-			<h1>Weather App</h1>
+			<div class="h1-icon--flex">
+				<h1>Forcast</h1>
+				<i class="fa fa-umbrella" aria-hidden="true"></i>
+			</div>
 		</header>
 		<section class="weather-results--total wrapper--inner">
 			<!-- weather results on load -->
 				<div class="weather-results--styles">
 					<div class="weather-results">
-
 						<figure class="icons">
-							<canvas class="weatherType" id="icon1" width="128" height="128"></canvas>
+							<canvas class="weatherType" id="icon1"></canvas>
 						</figure>
+						<p class="temp-current--leading-temp"><span class="temp-c-current--results"></span>&#176;C</p>
 
 						<p class="summary--results"></p>
 
-						<p class="temp--results">Current Temperature: <span class="temp-c-current--results"></span>&#176;C</p>
-
 						<p class="temp">Feels like: <span class="temp-c-feels-like--results"></span>&#176;C</p>
 
-						<p class="precip-prop--results-p">Chance of Rain: <span class="precip-prop--results"></span><i class="fa fa-info-circle" aria-hidden="true"></i><div class="info-circle-hover--text">words here</div></p>
+						<p class="precip-prop--results-p">Chance of Precipitation: <span class="precip-prop--results"></span>&#37;</p>
 
-						<p class="precip-instens--results"></p>
+						<p class="precip-details--results-p">How much to expect: <span class="precip-instens--results"></span> cm</p>
+
+						<p class="precip-details--results-p">Type of Precipitation: <span class="precip-type--results"></span></p>
 
 						<p class="week-ahead--results">What to expect this week: <span class="daily-week--results"></span></p>
 
@@ -57,8 +66,9 @@
 				</div>
 			</div>
 		</section>
-		<footer>
+		<footer class="wrapper--inner--footer">
 			<a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
+			<a href="http://katiecodes.ca/">Made by Katie!</a>
 		</footer>
 	</main>
 

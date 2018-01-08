@@ -1,7 +1,7 @@
 // variables
 
-$main-text: 'Nunito Sans', sans-serif;
-$secondary-text: 'Open Sans', sans-serif;
+$header: 'Nunito Sans', sans-serif;
+$text-primary: 'Open Sans', sans-serif;
 
 $white: rgb(254, 255, 253);
 $black: rgb(24, 29, 37);
@@ -22,6 +22,11 @@ $black: rgb(24, 29, 37);
 .wrapper--inner {
     max-width: 1000px;
     margin: 30px auto;
+}
+
+.wrapper--inner--footer {
+    max-width: 1350px;
+    margin: 0px auto;
 }
 
 // base size
@@ -60,9 +65,5 @@ p, button {
 
 p, a, button {
     color: $black;
-}
-
-h1 {
-    @include font-size-value(45);
-    margin-bottom: 0;
+    font-family: $text-primary;
 }

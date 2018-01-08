@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    a {
+        margin: 12px;
+        margin-bottom: 0;
+        transition: 0.3s;
+        border: 1px solid transparent;
+        padding: 5px;
+        &:hover {
+            border-bottom: 2px solid $white;
+        }
+    }
+}

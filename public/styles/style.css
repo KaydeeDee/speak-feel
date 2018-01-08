@@ -138,6 +138,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   max-width: 1000px;
   margin: 30px auto; }
 
+.wrapper--inner--footer {
+  max-width: 1350px;
+  margin: 0px auto; }
+
 html {
   font-size: 62.5%; }
 
@@ -165,12 +169,32 @@ p, button {
   font-size: 1.9rem; }
 
 p, a, button {
-  color: #181d25; }
+  color: #181d25;
+  font-family: "Open Sans", sans-serif; }
 
 h1 {
-  font-size: 45px;
-  font-size: 4.5rem;
-  margin-bottom: 0; }
+  font-size: 65px;
+  font-size: 6.5rem;
+  font-family: "Nunito Sans", sans-serif;
+  margin-bottom: 0;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px; }
+
+.h1-icon--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .h1-icon--flex .fa {
+    font-size: 47px;
+    font-size: 4.7rem;
+    height: 37px;
+    margin-top: 31px;
+    margin-left: 10px;
+    vertical-align: bottom; }
 
 loader {
   background: #fefffd;
@@ -178,11 +202,14 @@ loader {
   height: 100%;
   width: 100%; }
   loader .loading-icon--container {
-    margin-top: 40vh; }
+    margin-top: 35vh; }
   loader .fa-spinner {
     font-size: 60px;
     font-size: 6rem;
-    z-index: 2; }
+    z-index: 2;
+    margin-top: 25px; }
+  loader p {
+    margin-top: 0; }
 
 .weather-results, .loading-screen {
   display: none; }
@@ -191,7 +218,7 @@ loader {
   background: rgba(254, 255, 253, 0.7);
   width: 75%;
   min-height: 570px;
-  margin-top: 8vh;
+  margin-top: 3vh;
   padding: 20px; }
 
 .weather-results--styles {
@@ -223,6 +250,16 @@ loader {
     .weather-results--styles .fa-info-circle:hover {
       color: #fefffd; }
 
+.temp-current--leading-temp {
+  font-size: 50px;
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+#icon1 {
+  height: 130px;
+  max-width: 250px; }
+
 .date-time--results-p {
   font-size: 14px;
   font-size: 1.4rem;
@@ -231,3 +268,23 @@ loader {
 
 .info-circle-hover--text {
   display: none; }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px; }
+  footer a {
+    margin: 12px;
+    margin-bottom: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    padding: 5px; }
+    footer a:hover {
+      border-bottom: 2px solid #fefffd; }

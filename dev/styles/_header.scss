@@ -1,0 +1,20 @@
+h1 {
+    @include font-size-value(65);
+    font-family: $header;
+    margin-bottom: 0;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+.h1-icon--flex {
+    display: flex;
+    justify-content: center;
+    .fa {
+        @include font-size-value(47);
+        height: 37px;
+        margin-top: 31px;
+        margin-left: 10px;
+        vertical-align: bottom;
+    }
+}
