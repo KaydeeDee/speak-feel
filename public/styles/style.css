@@ -172,6 +172,9 @@ p, a, button {
   color: #181d25;
   font-family: "Open Sans", sans-serif; }
 
+.footer--wrapper-responsive {
+  min-height: calc(96vh - 43px); }
+
 h1 {
   font-size: 65px;
   font-size: 6.5rem;
@@ -179,7 +182,8 @@ h1 {
   margin-bottom: 0;
   margin-top: 15px;
   text-transform: uppercase;
-  letter-spacing: 2.5px; }
+  letter-spacing: 4px;
+  font-weight: 700; }
 
 .h1-icon--flex {
   display: -webkit-box;
@@ -196,6 +200,9 @@ h1 {
     margin-left: 10px;
     vertical-align: bottom; }
 
+.pre-text--pre-results p {
+  margin-bottom: 55px; }
+
 loader {
   background: #fefffd;
   position: fixed;
@@ -204,8 +211,8 @@ loader {
   loader .loading-icon--container {
     margin-top: 35vh; }
   loader .fa-spinner {
-    font-size: 60px;
-    font-size: 6rem;
+    font-size: 64px;
+    font-size: 6.4rem;
     z-index: 2;
     margin-top: 25px; }
   loader p {
@@ -214,12 +221,14 @@ loader {
 .weather-results, .loading-screen {
   display: none; }
 
+.general-body--styles {
+  padding: 20px;
+  width: 75%;
+  margin-top: 3vh; }
+
 .weather-results--total {
   background: rgba(254, 255, 253, 0.7);
-  width: 75%;
-  min-height: 570px;
-  margin-top: 3vh;
-  padding: 20px; }
+  min-height: 570px; }
 
 .weather-results--styles {
   display: -webkit-box;
@@ -237,7 +246,9 @@ loader {
     padding: 6px 8px;
     border: 1.5px solid #181d25;
     -webkit-transition: 0.2s linear;
-    transition: 0.2s linear; }
+    transition: 0.2s linear;
+    text-transform: uppercase;
+    background: #fefffd; }
     .weather-results--styles button:hover {
       color: #fefffd;
       background: #181d25; }
@@ -263,11 +274,11 @@ loader {
 .date-time--results-p {
   font-size: 14px;
   font-size: 1.4rem;
-  margin-top: 85px;
+  margin-top: 30px;
   margin-bottom: 3px; }
 
-.info-circle-hover--text {
-  display: none; }
+.precip-type--results {
+  text-transform: capitalize; }
 
 footer {
   display: -webkit-box;
@@ -285,6 +296,6 @@ footer {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     border: 1px solid transparent;
-    padding: 5px; }
+    padding: 2px; }
     footer a:hover {
       border-bottom: 2px solid #fefffd; }

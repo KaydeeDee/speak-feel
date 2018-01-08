@@ -8,6 +8,7 @@ weatherApp.buttonStart = function() {
     $('.weather-start--button').on('click', function(event){
         $('loader').slideDown('slow');
         weatherApp.getWeather();
+        $('.pre-text--pre-results').hide();
         })
 };
 
@@ -28,7 +29,6 @@ function successGeo(position) {
         
     })
         .then(function (weatherInfo) {
-            console.log(weatherInfo)
 
             weatherApp.displayWeatherOnPage(weatherInfo.currently, weatherInfo.alerts, weatherInfo.daily);
 
@@ -43,6 +43,7 @@ function successGeo(position) {
 
 // converting UNIX to readable time and date
 weatherApp.convertTime = function(unixTimestamp) {
+
     const timeHold = new Date(unixTimestamp * 1000);
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const year = timeHold.getFullYear();
@@ -55,7 +56,6 @@ weatherApp.convertTime = function(unixTimestamp) {
 
     $('.date-time--results').text(formattedTime);
 };
-
 
 // display weather on page
 weatherApp.displayWeatherOnPage = function(current, alerts, daily) {
@@ -72,19 +72,21 @@ weatherApp.displayWeatherOnPage = function(current, alerts, daily) {
     // make percentage out of chance of precip
     const percipProb = current.precipProbability;
 
-    console.log(percipProb);
-
     const percentagePercipProb = Math.round(percipProb * 100);
     console.log(percentagePercipProb);
 
-    // inch to cm
-    const precipInt = current.precipIntensity;
-    const cmPrecipInt = Math.ceil(precipInt/0.39370).toFixed(1);
+    // meter to km
+    const windSpeedCurrent = current.windSpeed;
+    // console.log(windSpeedCurrent);
+    // const kmWindSpeedCurrent = Math.round(windSpeedCurrent/1000).toFixed(2);
+
+    $('.wind-speed--results').text(current.windSpeed);
     
     $('.summary--results').text(current.summary);
     $('.temp-c-current--results').text(roundedCurrent);
     $('.temp-c-feels-like--results').text(roundedApparent);
     $('.daily-week--results').text(daily.summary);
+    $('.wind-speed--results').text(windSpeedCurrent);
 
     // if/else for precip probability to show intensity or not
     if (percentagePercipProb === 0) {
@@ -92,7 +94,7 @@ weatherApp.displayWeatherOnPage = function(current, alerts, daily) {
         $('.precip-details--results-p').hide();
     } else {
         $('.precip-prop--results').text(percentagePercipProb);
-        $('.precip-instens--results').text(cmPrecipInt);
+        $('.precip-instens--results').text(current.precipIntensity);
         $('.precip-type--results').text(current.precipType);
     };
 
@@ -135,8 +137,13 @@ weatherApp.changeBackgroundAndIcon = function(backgroundNew) {
         icons.set("icon1", Skycons.PARTLY_CLOUDY_DAY);
     } else if (backgroundNew === "cloudy") {
         icons.set("icon1", Skycons.CLOUDY);
+        $('main').css({
+            'background': 'url("/public/styles/assets/overcast--background.jpg")'})
     } else if (backgroundNew === "partly-cloudy-night") {
-        $('main').css('background', 'url("/public/styles/assets/clear-night--background.jpg")');
+        $('main').css({
+            'background': 'url("/public/styles/assets/clear-night--background.jpg")',
+        });
+        $('footer a, h1, header .fa-umbrella').css({'color': 'rgb(254, 255, 253)'})
         icons.set("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
     } else {
         $('main').css('background', 'url("/public/styles/assets/clear-day--background.jpg")');
@@ -154,10 +161,11 @@ weatherApp.changeBackgroundAndIcon = function(backgroundNew) {
 weatherApp.pageLoaded = function(){
     $('.weather-start--button').html('Update Weather');
     $('.weather-results').show();
+    $('section').addClass('weather-results--total');
     setTimeout(function(){
         $('loader').slideUp('slow');
     }, 500);
-}
+};
 
 weatherApp.events = function(){
 

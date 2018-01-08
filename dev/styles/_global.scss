@@ -67,3 +67,8 @@ p, a, button {
     color: $black;
     font-family: $text-primary;
 }
+
+// wrapper stick to bottom responsive
+.footer--wrapper-responsive {
+    min-height: calc(96vh - 43px);
+}

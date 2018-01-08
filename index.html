@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Forcast</title>
 	<link type="image/png" href="public/styles/assets/favicon-umbrella.ico" rel="icon">
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700|Open+Sans:300i,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700|Open+Sans:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/style.css">
 </head>
 <body>
@@ -16,12 +16,13 @@
 	<!-- foggy forest photo by Inggrid Koe on Unsplash -->
 	<!-- dark cloudy photo by Ryos Kim on Unsplash -->
 	<!-- snow photo by Bob Canning on Unsplash -->
+	<!-- overcast photo by Barry Simon on Unsplash -->
 	<main class="wrapper--max">
 		<!-- loading screen -->
 		<loader class="loading-screen">
 			<div class="loading-icon--container"></div>
 				<div class="h1-icon--flex">
-					<h1>Forcast</h1>
+					<h1>Forecast</h1>
 					<i class="fa fa-umbrella" aria-hidden="true"></i>
 				</div>
 				<p>Grabbing information on your local weather...</p>
@@ -29,43 +30,52 @@
 				<span class="sr-only">Loading...</span>
 			</div>
 		</loader>
-		<header>
-			<div class="h1-icon--flex">
-				<h1>Forcast</h1>
-				<i class="fa fa-umbrella" aria-hidden="true"></i>
-			</div>
-		</header>
-		<section class="weather-results--total wrapper--inner">
-			<!-- weather results on load -->
-				<div class="weather-results--styles">
-					<div class="weather-results">
-						<figure class="icons">
-							<canvas class="weatherType" id="icon1"></canvas>
-						</figure>
-						<p class="temp-current--leading-temp"><span class="temp-c-current--results"></span>&#176;C</p>
+		<div class="footer--wrapper-responsive">
+			<header>
+				<div class="h1-icon--flex">
+					<h1>Forecast</h1>
+					<i class="fa fa-umbrella" aria-hidden="true"></i>
+				</div>
+			</header>
+			<section class="general-body--styles wrapper--inner">
+				<div class="pre-text--pre-results">
+					<p>Forecast is a weather app that tells what the weather is like in your area and what the weather is going to be like next week.</p>
+				</div>
+				<!-- weather results on load -->
+					<div class="weather-results--styles">
+						<div class="weather-results">
+							<figure class="icons">
+								<canvas class="weatherType" id="icon1"></canvas>
+							</figure>
+							<p class="temp-current--leading-temp"><span class="temp-c-current--results"></span>&#176;C</p>
 
-						<p class="summary--results"></p>
+							<p class="summary--results"></p>
 
-						<p class="temp">Feels like: <span class="temp-c-feels-like--results"></span>&#176;C</p>
+							<p class="temp">Feels like: <span class="temp-c-feels-like--results"></span>&#176;C</p>
 
-						<p class="precip-prop--results-p">Chance of Precipitation: <span class="precip-prop--results"></span>&#37;</p>
+							<p class="precip-prop--results-p">Chance of Precipitation: <span class="precip-prop--results"></span>&#37;</p>
 
-						<p class="precip-details--results-p">How much to expect: <span class="precip-instens--results"></span> cm</p>
+							<p class="precip-details--results-p">How much to expect: <span class="precip-instens--results"></span> Millimeters per hour</p>
 
-						<p class="precip-details--results-p">Type of Precipitation: <span class="precip-type--results"></span></p>
+							<p class="precip-details--results-p">Type of Precipitation: <span class="precip-type--results"></span></p>
 
-						<p class="week-ahead--results">What to expect this week: <span class="daily-week--results"></span></p>
+							<p class="wind-speed--p">Wind Speed:
+								<span class="wind-speed--results"></span> m/sec
+							</p>
 
-						<p class="date-time--results-p">Last Updated:
-							<span class="date-time--results"></span>
-						</p>
-					</div>
-					
-						<button class="weather-start--button">Tell me the weather!</button>
+							<p class="week-ahead--results">What to expect this week: <span class="daily-week--results"></span></p>
+
+							<p class="date-time--results-p">Last Updated:
+								<span class="date-time--results"></span>
+							</p>
+
+						</div>
+							<button class="weather-start--button">Tell me the weather!</button>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 		<footer class="wrapper--inner--footer">
 			<a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
 			<a href="http://katiecodes.ca/">Made by Katie!</a>

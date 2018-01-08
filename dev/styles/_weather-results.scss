@@ -1,3 +1,10 @@
+// pre-text
+.pre-text--pre-results {
+    p {
+        margin-bottom: 55px;
+    }
+}
+
 // loading screen/icon
 
 loader {
@@ -9,7 +16,7 @@ loader {
         margin-top: 35vh;
     }
     .fa-spinner {
-    @include font-size-value(60);
+    @include font-size-value(64);
     z-index: 2;
     margin-top: 25px;
     }
@@ -23,12 +30,15 @@ loader {
 }
 
 // where results are displayed
+.general-body--styles {
+    padding: 20px;
+    width: 75%;
+    margin-top: 3vh;
+}
+
 .weather-results--total {
     background: rgba($white, 0.7);
-    width: 75%;
     min-height: 570px;
-    margin-top: 3vh;
-    padding: 20px;
 }
 
 .weather-results--styles {
@@ -40,6 +50,8 @@ loader {
         padding: 6px 8px;
         border: 1.5px solid $black;
         transition: 0.2s linear;
+        text-transform: uppercase;
+        background: $white;
         &:hover {
             color: $white;
             background: $black;
@@ -67,15 +79,13 @@ loader {
     max-width: 250px;
     }
 
-
 .date-time--results-p {
     @include font-size-value(14);
-    margin-top: 85px;
+    margin-top: 30px;
     margin-bottom: 3px;
 }
 
-
-// info circle
-.info-circle-hover--text {
-    display: none;
+// result specific formatting
+.precip-type--results {
+    text-transform: capitalize;
 }
