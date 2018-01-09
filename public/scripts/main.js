@@ -75,7 +75,7 @@ weatherApp.displayWeatherOnPage = function (current, daily) {
 
     var amountOfPrecipRounded = Math.round(current.precipIntensity).toFixed(1);
 
-    // convert m/s to km/hr to 1 dec point
+    // convert m/s to km/hr 
     var windSpeedCurrent = current.windSpeed;
 
     var roundedWindSpeed = Math.round(windSpeedCurrent * 3.6);
