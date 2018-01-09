@@ -370,7 +370,7 @@ loader {
   .general-body--styles {
     width: 85%; } }
 
-@media (max-width: 440px) {
+@media (max-width: 470px) {
   #icon1 {
     height: 100px;
     max-width: 230px; }
@@ -387,7 +387,7 @@ loader {
     margin-top: 5px;
     height: 10px; }
   loader .loading-icon--container {
-    margin-top: 25vh;
+    margin-top: 20vh;
     padding: 20px; } }
 
 @media (max-width: 385px) {
@@ -402,7 +402,7 @@ loader {
     margin: 0 auto;
     margin-bottom: 15px; } }
 
-@media (max-width: 667px) and (max-height: 375px) {
+@media (max-width: 840px) and (max-height: 390px) {
   loader .loading-icon--container {
     margin-top: 10vh; } }
 
