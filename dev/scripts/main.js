@@ -72,7 +72,6 @@ weatherApp.displayWeatherOnPage = function(current, daily) {
     const percentagePercipProb = Math.round(percipProb * 100);
 
     // rounding out amount of precip
-
     const amountOfPrecipRounded = Math.round(current.precipIntensity).toFixed(1);
 
     // convert m/s to km/hr 
