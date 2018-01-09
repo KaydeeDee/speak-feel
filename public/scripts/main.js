@@ -161,6 +161,7 @@ weatherApp.changeBackgroundAndIcon = function (backgroundNew) {
         icons.set("icon1", Skycons.PARTLY_CLOUDY_DAY);
     };
 
+    // default properties for background in main
     $('main').css({ 'background-size': 'cover',
         'background-position': 'center',
         'background-repeat': 'no-repeat'
@@ -179,7 +180,7 @@ weatherApp.pageLoaded = function () {
     }, 500);
 };
 
-// holding click event
+// holding click event for info icon
 weatherApp.events = function () {
     $('.fa-info-circle').click(function () {
         $('.info-circle--text-show').toggleClass('info-circle-hover--text');
