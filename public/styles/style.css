@@ -390,7 +390,7 @@ loader {
     margin-top: 25vh;
     padding: 20px; } }
 
-@media (max-width: 380px) {
+@media (max-width: 385px) {
   .weather-results--flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

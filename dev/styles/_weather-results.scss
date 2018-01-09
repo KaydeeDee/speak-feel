@@ -161,17 +161,17 @@ loader {
 
 @media (max-width: 440px){
     #icon1 {
-    height: 100px;
-    max-width: 230px;
+        height: 100px;
+        max-width: 230px;
     }
     p {
-    @include font-size-value(17);
+        @include font-size-value(17);
     }
     button {
-    @include font-size-value(18.5);
+        @include font-size-value(18.5);
     }   
     .temp-current--leading-temp {
-    @include font-size-value(40);
+        @include font-size-value(40);
     }
     .weather-results--styles .fa-info-circle {
         margin-top: 5px;
@@ -183,11 +183,11 @@ loader {
     }
 }
 
-@media (max-width: 380px){
+@media (max-width: 385px){
     .weather-results--flex {
         flex-direction: column;
         .weather-results--sub-titles {
-        margin-bottom: 5px;
+            margin-bottom: 5px;
         }
     }
     .icon-uv--flex {

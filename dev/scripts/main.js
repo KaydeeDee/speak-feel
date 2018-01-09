@@ -63,8 +63,8 @@ weatherApp.displayWeatherOnPage = function(current, daily) {
     const numberCurrent = current.temperature;
     const numberApparent = current.apparentTemperature;
 
-    const roundedCurrent = Math.round(numberCurrent).toFixed(0);
-    const roundedApparent = Math.round(numberApparent).toFixed(0);
+    const roundedCurrent = Math.round(numberCurrent);
+    const roundedApparent = Math.round(numberApparent);
 
     // make percentage out of chance of precip
     const percipProb = current.precipProbability;
@@ -78,7 +78,7 @@ weatherApp.displayWeatherOnPage = function(current, daily) {
     // convert m/s to km/hr to 1 dec point
     const windSpeedCurrent = current.windSpeed;
 
-    const roundedWindSpeed = Math.round(windSpeedCurrent * 3.6).toFixed(1);
+    const roundedWindSpeed = Math.round(windSpeedCurrent * 3.6);
 
     // push info to DOM
     $('.summary--results').text(current.summary);
