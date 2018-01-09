@@ -72,6 +72,10 @@ weatherApp.displayWeatherOnPage = function (current, daily) {
 
     var percentagePercipProb = Math.round(percipProb * 100);
 
+    // rounding out amount of precip
+
+    var amountOfPrecipRounded = Math.round(current.precipIntensity).toFixed(1);
+
     // convert m/s to km/hr to 1 dec point
     var windSpeedCurrent = current.windSpeed;
 
@@ -91,7 +95,7 @@ weatherApp.displayWeatherOnPage = function (current, daily) {
         $('.precip-details--results-p').hide();
     } else {
         $('.precip-prop--results').text(percentagePercipProb + '%');
-        $('.precip-instens--results').text(current.precipIntensity + ' mil/hour');
+        $('.precip-instens--results').text(amountOfPrecipRounded + ' mm/hour');
         $('.precip-type--results').text(current.precipType);
     };
 

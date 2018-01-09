@@ -254,6 +254,8 @@ loader {
     margin-top: 25px; }
   loader p {
     margin-top: 0; }
+  loader .h1-icon--flex {
+    padding: 10px; }
 
 .weather-results, .loading-screen {
   display: none; }
@@ -291,12 +293,16 @@ loader {
       background: #181d25; }
   .weather-results--styles .fa-info-circle {
     padding-left: 5px;
-    margin-top: 7px;
+    margin-top: 7.5px;
     font-size: 14px;
     font-size: 1.4rem;
     cursor: pointer; }
     .weather-results--styles .fa-info-circle:hover {
-      color: #fefffd; }
+      color: #546682; }
+    .weather-results--styles .fa-info-circle:active {
+      color: black; }
+    .weather-results--styles .fa-info-circle:focus {
+      color: black; }
 
 .temp-current--leading-temp {
   font-size: 50px;
@@ -352,7 +358,7 @@ loader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 25px; }
+  height: 20px; }
 
 @media (max-width: 850px) {
   .general-body--styles {
@@ -373,7 +379,10 @@ loader {
     font-size: 4rem; }
   .weather-results--styles .fa-info-circle {
     margin-top: 5px;
-    height: 10px; } }
+    height: 10px; }
+  .loading-icon--container {
+    margin-top: 25vh;
+    padding: 20px; } }
 
 @media (max-width: 380px) {
   .weather-results--flex {
@@ -386,6 +395,10 @@ loader {
   .icon-uv--flex {
     margin: 0 auto;
     margin-bottom: 15px; } }
+
+@media (max-width: 667px) and (max-height: 375px) {
+  loader .loading-icon--container {
+    margin-top: 10vh; } }
 
 footer {
   display: -webkit-box;
