@@ -101,55 +101,55 @@ weatherApp.changeBackgroundAndIcon = function(backgroundNew) {
     icons.play();
 
     if (backgroundNew === "clear-day") {
-        $('main').css('background', 'url("/public/styles/assets/clear-day--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/clear-day--background.jpg")');
         icons.set("icon1", Skycons.CLEAR_DAY);
     } else if (backgroundNew === "clear-night") {
-        $('main').css('background', 'url("/public/styles/assets/clear-night--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/clear-night--background.jpg")');
         icons.set("icon1", Skycons.CLEAR_NIGHT);
         $('header, footer a').css({
             'color': 'rgb(254, 255, 253)'
         })
     } else if (backgroundNew === "fog") {
-        $('main').css('background', 'url("/public/styles/assets/fog--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/fog--background.jpg")');
         icons.set("icon1", Skycons.FOG);
         $('footer a').css({
             'color': 'rgb(254, 255, 253)'
         })
     } else if (backgroundNew === "rain" || backgroundNew === "thunderstorm") {
-        $('main').css('background', 'url("/public/styles/assets/rain--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/rain--background.jpg")');
         icons.set("icon1", Skycons.RAIN); 
         $('header, footer a').css({
             'color': 'rgb(254, 255, 253)'
         })
     } else if (backgroundNew === "snow" || backgroundNew === "hail") {
-        $('main').css('background', 'url("/public/styles/assets/snow--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/snow--background.jpg")');
         icons.set("icon1", Skycons.SNOW);
     } else if (backgroundNew === "wind" || backgroundNew === "tornado") {
-        $('main').css('background', 'url("/public/styles/assets/wind--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/wind--background.jpg")');
         icons.set("icon1", Skycons.WIND);
         $('header, footer a').css({
             'color': 'rgb(254, 255, 253)'
         })
     } else if (backgroundNew === "sleet") {
-        $('main').css('background', 'url("/public/styles/assets/wind--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/wind--background.jpg")');
         icons.set("icon1", Skycons.SLEET);
     } else if (backgroundNew === "partly-cloudly-day") {
         icons.set("icon1", Skycons.PARTLY_CLOUDY_DAY);
     } else if (backgroundNew === "cloudy") {
         icons.set("icon1", Skycons.CLOUDY);
         $('main').css({
-            'background': 'url("/public/styles/assets/overcast--background.jpg")'})
+            'background': 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/overcast--background.jpg")'})
         $('header').css({
             'color': 'rgb(254, 255, 253)'
         })
     } else if (backgroundNew === "partly-cloudy-night") {
         $('main').css({
-            'background': 'url("/public/styles/assets/clear-night--background.jpg")',
+            'background': 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/clear-night--background.jpg")',
         });
         $('footer a, header').css({'color': 'rgb(254, 255, 253)'})
         icons.set("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
     } else {
-        $('main').css('background', 'url("/public/styles/assets/clear-day--background.jpg")');
+        $('main').css('background', 'url("https://kaydeedee.github.io/speak-feel/public/styles/assets/clear-day--background.jpg")');
         icons.set("icon1",Skycons.PARTLY_CLOUDY_DAY);
     };
 
