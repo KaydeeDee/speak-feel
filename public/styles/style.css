@@ -243,10 +243,12 @@ loader {
   padding: 1px;
   position: fixed;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  z-index: 4; }
   loader .loading-icon--container {
     margin-top: 35vh;
-    padding: 10px; }
+    padding: 10px;
+    z-index: 3; }
   loader .fa-spinner {
     font-size: 64px;
     font-size: 6.4rem;
@@ -257,7 +259,7 @@ loader {
   loader .h1-icon--flex {
     padding: 10px; }
 
-.weather-results, .loading-screen {
+.weather-results, loader {
   display: none; }
 
 .general-body--styles {

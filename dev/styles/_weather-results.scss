@@ -8,15 +8,18 @@
 
 // loading screen/icon
 
+// z-indexs given to fix IE bug
 loader {
     background: $white;
     padding: 1px;
     position: fixed;
     height: 100%;
     width: 100%;
+    z-index: 4;
     .loading-icon--container {
         margin-top: 35vh;
         padding: 10px;
+        z-index: 3;
     }
     .fa-spinner {
     @include font-size-value(64);
@@ -31,7 +34,7 @@ loader {
     }
 }
 
-.weather-results, .loading-screen {
+.weather-results, loader {
     display: none;
 }
 
