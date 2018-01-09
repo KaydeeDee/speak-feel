@@ -7,7 +7,7 @@ weatherApp.darkAPIUrl = 'https://api.darksky.net/forecast/fbec69199541239bcdb9ce
 // on click of button, start loading screen, begin getWeather
 weatherApp.buttonStart = function () {
     $('.weather-start--button').on('click', function (event) {
-        $('loader').slideDown('fast');
+        $('loader').slideDown('slow');
         weatherApp.getWeather();
         $('.pre-text--pre-results').hide();
     });
@@ -72,12 +72,17 @@ weatherApp.displayWeatherOnPage = function (current, daily) {
 
     var percentagePercipProb = Math.round(percipProb * 100);
 
+    // convert m/s to km/hr to 1 dec point
+    var windSpeedCurrent = current.windSpeed;
+
+    var roundedWindSpeed = Math.round(windSpeedCurrent * 3.6).toFixed(1);
+
     // push info to DOM
     $('.summary--results').text(current.summary);
     $('.temp-c-current--results').text(roundedCurrent + '\xB0C');
     $('.temp-c-feels-like--results').text(roundedApparent + '\xB0C');
     $('.daily-week--results').text('' + daily.summary);
-    $('.wind-speed--results').text(current.windSpeed + ' m/sec');
+    $('.wind-speed--results').text(roundedWindSpeed + ' km/h');
     $('.uv-index--results').text(current.uvIndex);
 
     // if/else for precip probability to show intensity or not
@@ -174,12 +179,7 @@ weatherApp.pageLoaded = function () {
 // holding click event
 weatherApp.events = function () {
     $('.fa-info-circle').click(function () {
-        $('.info-circle-hover--text').show().css({
-            'top': '-22px'
-        });
-        $('.uv-index--mouse-leave').on('mouseleave', function () {
-            $('.info-circle-hover--text').hide();
-        });
+        $('.info-circle--text-show').toggleClass('info-circle-hover--text');
     });
 };
 

@@ -10,11 +10,13 @@
 
 loader {
     background: $white;
+    padding: 1px;
     position: fixed;
     height: 100%;
     width: 100%;
     .loading-icon--container {
         margin-top: 35vh;
+        padding: 10px;
     }
     .fa-spinner {
     @include font-size-value(64);
@@ -106,7 +108,7 @@ loader {
 
 // date and time and UV extra info text
 
-.uv-index--mouse-leave .info-circle-hover--text p, .date-time--results-p {
+.info-circle-hover--text-p, .date-time--results-p {
     @include font-size-value(14);
     color: lighten($black, 40);
 }
@@ -120,8 +122,11 @@ loader {
 .info-circle-hover--text {
     display: none;
     width: 100%;
-    position: relative;
 }
+
+.info-circle-hover--text-p {
+    margin-top: 0px;
+} 
 
 // week ahead summary
 .daily-week--results {
@@ -131,6 +136,7 @@ loader {
 // info icon and text
 .icon-uv--flex {
     display: flex;
+    height: 25px;
 }
 
 // media queries
@@ -161,7 +167,7 @@ loader {
     }
 }
 
-@media (max-width: 375px){
+@media (max-width: 380px){
     .weather-results--flex {
         flex-direction: column;
         .weather-results--sub-titles {
@@ -170,5 +176,6 @@ loader {
     }
     .icon-uv--flex {
         margin: 0 auto;
+        margin-bottom: 15px;
     }
 }

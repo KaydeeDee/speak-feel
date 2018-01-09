@@ -240,11 +240,13 @@ h1 {
 
 loader {
   background: #fefffd;
+  padding: 1px;
   position: fixed;
   height: 100%;
   width: 100%; }
   loader .loading-icon--container {
-    margin-top: 35vh; }
+    margin-top: 35vh;
+    padding: 10px; }
   loader .fa-spinner {
     font-size: 64px;
     font-size: 6.4rem;
@@ -327,7 +329,7 @@ loader {
 .precip-type--results {
   text-transform: capitalize; }
 
-.uv-index--mouse-leave .info-circle-hover--text p, .date-time--results-p {
+.info-circle-hover--text-p, .date-time--results-p {
   font-size: 14px;
   font-size: 1.4rem;
   color: #6a7e9f; }
@@ -338,8 +340,10 @@ loader {
 
 .info-circle-hover--text {
   display: none;
-  width: 100%;
-  position: relative; }
+  width: 100%; }
+
+.info-circle-hover--text-p {
+  margin-top: 0px; }
 
 .daily-week--results {
   margin-top: 0; }
@@ -347,7 +351,8 @@ loader {
 .icon-uv--flex {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 25px; }
 
 @media (max-width: 850px) {
   .general-body--styles {
@@ -370,7 +375,7 @@ loader {
     margin-top: 5px;
     height: 10px; } }
 
-@media (max-width: 375px) {
+@media (max-width: 380px) {
   .weather-results--flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -379,7 +384,8 @@ loader {
     .weather-results--flex .weather-results--sub-titles {
       margin-bottom: 5px; }
   .icon-uv--flex {
-    margin: 0 auto; } }
+    margin: 0 auto;
+    margin-bottom: 15px; } }
 
 footer {
   display: -webkit-box;
