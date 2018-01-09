@@ -65,11 +65,16 @@ p {
 
 button {
     @include font-size-value(22);
+    font-weight: 500;
 }
 
 p, a, button {
     color: $black;
     font-family: $text-primary;
+}
+
+p, a {
+    font-weight: 400;
 }
 
 // wrapper stick to bottom responsive

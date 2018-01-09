@@ -35,7 +35,6 @@ weatherApp.getWeather = function () {
             weatherApp.convertTime(weatherInfo.currently.time);
         });
     };
-
     function errorGeo(sad) {
         alert("Please allow the browser to share your location by refreshing this page and clicking 'allow'!");
     };
@@ -86,7 +85,7 @@ weatherApp.displayWeatherOnPage = function (current, daily) {
     $('.temp-c-current--results').text(roundedCurrent + '\xB0C');
     $('.temp-c-feels-like--results').text(roundedApparent + '\xB0C');
     $('.daily-week--results').text('' + daily.summary);
-    $('.wind-speed--results').text(roundedWindSpeed + ' km/h');
+    $('.wind-speed--results').text(roundedWindSpeed + ' km/hr');
     $('.uv-index--results').text(current.uvIndex);
 
     // if/else for precip probability to show intensity or not
@@ -95,7 +94,7 @@ weatherApp.displayWeatherOnPage = function (current, daily) {
         $('.precip-details--results-p').hide();
     } else {
         $('.precip-prop--results').text(percentagePercipProb + '%');
-        $('.precip-instens--results').text(amountOfPrecipRounded + ' mm/hour');
+        $('.precip-instens--results').text(amountOfPrecipRounded + ' mm/hr');
         $('.precip-type--results').text(current.precipType);
     };
 

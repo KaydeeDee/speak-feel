@@ -170,11 +170,15 @@ p {
 
 button {
   font-size: 22px;
-  font-size: 2.2rem; }
+  font-size: 2.2rem;
+  font-weight: 500; }
 
 p, a, button {
   color: #181d25;
   font-family: "Open Sans", sans-serif; }
+
+p, a {
+  font-weight: 400; }
 
 .footer--wrapper-responsive {
   min-height: calc(96vh - 43px); }
