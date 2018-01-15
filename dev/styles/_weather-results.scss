@@ -1,7 +1,7 @@
 // text on intro screen
 .pre-text--pre-results {
     p {
-        margin-top: 26vh;
+        margin-top: 20%;
         margin-bottom: 80px;
         @include font-size-value(27);
     }
@@ -153,11 +153,11 @@ loader {
 
 // media queries general
 
-@media (max-width: 850px){
-    .general-body--styles {
-        width: 85%;
-    }
-}
+// @media (max-width: 850px){
+//     .general-body--styles {
+//         width: 85%;
+//     }
+// }
 
 @media (max-width: 470px){
     #icon1 {
