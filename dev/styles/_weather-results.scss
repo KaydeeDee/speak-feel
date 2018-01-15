@@ -153,11 +153,11 @@ loader {
 
 // media queries general
 
-// @media (max-width: 850px){
-//     .general-body--styles {
-//         width: 85%;
-//     }
-// }
+@media (max-width: 850px){
+    .button-intro--styles {
+        @include font-size-value(22);
+    }
+}
 
 @media (max-width: 470px){
     #icon1 {
@@ -169,7 +169,10 @@ loader {
     }
     button {
         @include font-size-value(18.5);
-    }   
+    } 
+    .button-intro--styles {
+        @include font-size-value(20);
+    }  
     .temp-current--leading-temp {
         @include font-size-value(40);
     }
