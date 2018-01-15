@@ -1,9 +1,9 @@
 // header shared with loading screen
 
 h1 {
-    @include font-size-value(65);
+    @include font-size-value(70);
     font-family: $header;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     margin-top: 15px;
     text-transform: uppercase;
     letter-spacing: 4px;

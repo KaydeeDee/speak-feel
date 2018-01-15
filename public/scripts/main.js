@@ -10,6 +10,7 @@ weatherApp.buttonStart = function () {
         $('loader').slideDown('slow');
         weatherApp.getWeather();
         $('.pre-text--pre-results').hide();
+        $('button').removeClass("button-intro--styles");
     });
 };
 
@@ -173,10 +174,9 @@ weatherApp.changeBackgroundAndIcon = function (backgroundNew) {
 weatherApp.pageLoaded = function () {
     $('.weather-start--button').html('Update Weather');
     $('.weather-results').show();
-    $('section').addClass('weather-results--total');
     setTimeout(function () {
         $('loader').slideUp('slow');
-    }, 500);
+    }, 900);
 };
 
 // holding click event for info icon

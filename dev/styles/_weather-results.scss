@@ -1,10 +1,15 @@
 // text on intro screen
 .pre-text--pre-results {
     p {
-        margin-bottom: 55px;
-        @include font-size-value(25);
+        margin-top: 26vh;
+        margin-bottom: 80px;
+        @include font-size-value(27);
     }
 }
+
+.button-intro--styles {
+        @include font-size-value(24);
+    }
 
 // loading screen/icon
 
@@ -17,7 +22,7 @@ loader {
     width: 100%;
     z-index: 4;
     .loading-icon--container {
-        margin-top: 35vh;
+        margin-top: 33vh;
         padding: 10px;
         z-index: 3;
     }
@@ -39,15 +44,10 @@ loader {
 }
 
 // where results are displayed
+
 .general-body--styles {
     padding: 20px 40px;
-    width: 75%;
-    margin-top: 3vh;
-}
-
-.weather-results--total {
-    background: rgba($white, 0.7);
-    min-height: 570px;
+    width: 100%;
 }
 
 .weather-results--styles {
@@ -84,14 +84,14 @@ loader {
 }
 
 .temp-current--leading-temp {
-    @include font-size-value(50);
+    @include font-size-value(53);
     margin-top: 0;
     margin-bottom: 0;
     }
 
 #icon1 {
-    height: 130px;
-    max-width: 250px;
+    height: 140px;
+    max-width: 260px;
     }
 
 // result specific formatting

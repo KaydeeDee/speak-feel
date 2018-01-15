@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Forecast</title>
-	<link type="image/png" href="https://kaydeedee.github.io/speak-feel/public/styles/assets/umbrella-fav.png" rel="icon">
+	<link type="image/png" href="public/styles/assets/umbrella-fav.png" rel="icon">
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700|Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="public/styles/style.css">
 </head>
@@ -31,19 +31,19 @@
 			</div>
 		</loader>
 		<!-- wrapper "stick to bottom" footer start -->
-		<div class="footer--wrapper-responsive">
 			<header>
 				<div class="h1-icon--flex">
 					<h1>Forecast</h1>
 					<i class="fa fa-umbrella" aria-hidden="true"></i>
 				</div>
 			</header>
-			<section class="general-body--styles wrapper--inner">
-				<div class="pre-text--pre-results">
+		<div class="footer--wrapper-responsive">
+			<section class="general-body--styles">
+				<div class="pre-text--pre-results wrapper--inner">
 					<p>Forecast is a weather app that tells what the weather is like in your area and what the weather is going to be like next week.</p>
 				</div>
 				<!-- weather results on load -->
-				<div class="weather-results--styles">
+				<div class="weather-results--styles wrapper--inner">
 					<div class="weather-results">
 						<figure class="icons">
 							<canvas class="weatherType" id="icon1" aria-hidden="true"></canvas>
@@ -76,14 +76,14 @@
 							<p class="weather-results--sub-titles">Wind Speed:&nbsp;</p>
 							<p class="wind-speed--results"></p>
 						</div>
-
+<!-- 
 						<div class="weather-results--flex">
 							<p class="weather-results--sub-titles">UV Index:&nbsp;</p>
 							<div class="icon-uv--flex">
 								<p class="uv-index--results" role="button"></p>
 								<i class="fa fa-info-circle" aria-hidden="true"></i>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="info-circle-hover--text info-circle--text-show">
 							<p class="info-circle-hover--text-p">The UV Index is on a scale of 0-10.</p>
@@ -94,7 +94,7 @@
 							<p class="daily-week--results"></p>
 						</div>
 					</div>
-					<button class="weather-start--button">Tell me the weather!</button>
+					<button class="weather-start--button button-intro--styles">Tell me the weather!</button>
 					<p class="date-time--results-p weather-results">Last Updated:
 					<span class="date-time--results"></span>
 					</p>

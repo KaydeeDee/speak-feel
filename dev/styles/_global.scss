@@ -42,7 +42,8 @@ body {
 }
 
 main {
-    background: url("https://kaydeedee.github.io/speak-feel/public/styles/assets/clear-day--background.jpg");
+    background:
+    url("https://kaydeedee.github.io/speak-feel/public/styles/assets/clear-day--background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,8 +77,9 @@ p, a, button {
 p, a {
     font-weight: 400;
 }
-
 // wrapper stick to bottom responsive
 .footer--wrapper-responsive {
-    min-height: calc(96vh - 43px);
+    min-height: calc(100vh - 175px);
+    background: rgba($white, 0.8);
+    box-shadow: 2px 2px 14px 4px lighten($black, 60);
 }

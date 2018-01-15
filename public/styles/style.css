@@ -181,13 +181,16 @@ p, a {
   font-weight: 400; }
 
 .footer--wrapper-responsive {
-  min-height: calc(96vh - 43px); }
+  min-height: calc(100vh - 175px);
+  background: rgba(254, 255, 253, 0.8);
+  -webkit-box-shadow: 2px 2px 14px 4px #a8b4c7;
+          box-shadow: 2px 2px 14px 4px #a8b4c7; }
 
 h1 {
-  font-size: 65px;
-  font-size: 6.5rem;
+  font-size: 70px;
+  font-size: 7rem;
   font-family: "Nunito Sans", sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   margin-top: 15px;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -238,9 +241,14 @@ h1 {
     margin-left: 2px; } }
 
 .pre-text--pre-results p {
-  margin-bottom: 55px;
-  font-size: 25px;
-  font-size: 2.5rem; }
+  margin-top: 26vh;
+  margin-bottom: 80px;
+  font-size: 27px;
+  font-size: 2.7rem; }
+
+.button-intro--styles {
+  font-size: 24px;
+  font-size: 2.4rem; }
 
 loader {
   background: #fefffd;
@@ -250,7 +258,7 @@ loader {
   width: 100%;
   z-index: 4; }
   loader .loading-icon--container {
-    margin-top: 35vh;
+    margin-top: 33vh;
     padding: 10px;
     z-index: 3; }
   loader .fa-spinner {
@@ -268,12 +276,7 @@ loader {
 
 .general-body--styles {
   padding: 20px 40px;
-  width: 75%;
-  margin-top: 3vh; }
-
-.weather-results--total {
-  background: rgba(254, 255, 253, 0.7);
-  min-height: 570px; }
+  width: 100%; }
 
 .weather-results--styles {
   display: -webkit-box;
@@ -311,14 +314,14 @@ loader {
       color: black; }
 
 .temp-current--leading-temp {
-  font-size: 50px;
-  font-size: 5rem;
+  font-size: 53px;
+  font-size: 5.3rem;
   margin-top: 0;
   margin-bottom: 0; }
 
 #icon1 {
-  height: 130px;
-  max-width: 250px; }
+  height: 140px;
+  max-width: 260px; }
 
 .weather-results--flex {
   display: -webkit-box;
