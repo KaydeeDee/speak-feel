@@ -181,7 +181,7 @@ p, a {
   font-weight: 400; }
 
 .footer--wrapper-responsive {
-  min-height: calc(100vh - 15vh);
+  min-height: calc(90vh - 16vh);
   background: rgba(254, 255, 253, 0.8);
   -webkit-box-shadow: 2px 2px 14px 4px #a8b4c7;
           box-shadow: 2px 2px 14px 4px #a8b4c7;

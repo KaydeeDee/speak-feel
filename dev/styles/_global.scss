@@ -79,7 +79,7 @@ p, a {
 }
 // wrapper stick to bottom responsive
 .footer--wrapper-responsive {
-    min-height: calc(100vh - 15vh);
+    min-height: calc(90vh - 16vh);
     background: rgba($white, 0.8);
     box-shadow: 2px 2px 14px 4px lighten($black, 60);
     margin-bottom: 20px;
